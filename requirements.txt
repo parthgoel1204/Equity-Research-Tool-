@@ -1,0 +1,34 @@
+# ─── Core LangChain & Groq ────────────────────────────────────────────────
+langchain==0.3.24
+langsmith==0.3.42
+langchain-core==0.3.59
+langchain-groq==0.3.2
+groq==0.24.0
+langchain-community==0.3.23
+
+# ─── HuggingFace + Embeddings ─────────────────────────────────────────────
+# use the PyTorch CUDA 11.7 wheels index first, then fall back to PyPI
+--extra-index-url https://download.pytorch.org/whl/cu117
+
+torch>=2.0.0,<3.0.0
+torchvision
+
+# HuggingFace tooling
+huggingface-hub>=0.16.4,<1.0.0
+transformers>=4.30.0,<5.0.0
+sentence-transformers>=2.2.2,<3.0.0
+
+# LangChain’s new embeddings bridge
+langchain-huggingface
+
+# ─── Document Loading + Utilities ─────────────────────────────────────────
+streamlit
+python-dotenv
+tiktoken
+
+# Unstructured + magic for HTML detection
+unstructured[local-inference]
+python-magic-bin   # on Windows — if you’re on macOS/Linux you can use python-magic instead
+
+# ─── Vector Store ───────────────────────────────────────────────────────────
+faiss-cpu
